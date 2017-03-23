@@ -1,33 +1,194 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Microsoft Yahei,"微软雅黑";
+}
 body {
-    padding: 50px;
-}
-img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    display: flex;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
-a {
+a{
     text-decoration: none;
-    color:palevioletred;
+    color: #972c28;
+    cursor: pointer;
+}
+.aside {
+    background-color: rgb(222, 76, 63);
+    width: 300px;
+    min-height: 100vh;
+    
+    overflow: auto;
+    text-align: center;
+    padding: 28px 20px;
+    color: rgba(255, 255, 255,0.85);
+    float: left;
+}
+.aside img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255,0.9);
+    padding: 6px;
 }
 
-.project,.contact {
-    width: 300px;
-    margin-bottom: 10px;
+.aside h3 {    
+    font-size: 16px;
 }
-.contact {
-    position: absolute;
-    left: 330px;
-    top: 80px;
+.aside .job {
+    border-top: 2px solid #be3b36;
+    border-bottom: 2px solid #be3b36;
+    margin: 18px 0;
+    padding: 8px 0;
+    color: #972c28;
+    font-size: 18px;
+    font-weight: bold;
 }
-.contact a {
-    color: midnightblue;
+.skill {
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: right;
+    margin-bottom: 8px;
+    width: 240px;
+    display: inline-block;
+}
+.skill>span {
+    display: inline-block;
+    width: 140px;
+    height: 12px;
+    background-color: #be3b36;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.skill>span>span {
+    display: block;
+    height: 100%;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255,0.85);
+}
+
+.inner-1 {
+    width: 91%;
+}
+.inner-2{
+    width: 86%;
+}
+.inner-3{
+    width: 81%;
+}
+.inner-4{
+    width: 80%;
+}
+.inner-5{
+    width: 73%;
+}
+.inner-6{
+    width: 68%;
+}
+.aside a {
+    display: block;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 10px;
 }
 span.tri {
     display: inline-block;
     height: 0;
     width: 0;
-    border-left: 10px solid midnightblue;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
+    border-left: 12px solid #972c28;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
 }
+.main {
+    background-color: #e2ddd4;
+    width: 74vw;
+    overflow: auto;
+    right: 0;
+    top: 0;
+    padding: 30px 40px;
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+}
+.main div {    
+    width: 49%;
+    padding: 5px;
+}
+.main div:hover {
+    background-color: rgba(255, 255, 255,0.3);
+    border-radius: 10px;
+}
+img:hover,span:hover,a:hover {
+    opacity: 0.7;
+}
+.main div:hover a{
+    animation: change 1s;    
+}
+@keyframes change {
+    30% {
+        color: rgba(255, 255, 255,0.3);
+    }
+    100%{ 
+        color: rgb(222, 76, 63);
+    }
+}
+
+.main div a{
+    color: rgb(222, 76, 63);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.main div p a {
+    font-size: 14px;
+}
+.main div p{
+    margin: 5px 0;
+    color: #6c6b6b;
+}
+.main>p{
+    margin: 20px 0;
+    color: rgb(222, 76, 63);
+    font-weight: bold;
+}
+.main .me {
+    width: 100%;
+}
+.main .me span {
+    background-color: rgb(222, 76, 63);
+    color: white;
+    line-height: 36px;
+    padding: 0 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    .main div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: inherit;
+    }
+    .aside,.main {
+        width: 100%;
+        max-width: 100%;
+    }
+    .main div {
+        width: 100%;
+    }
+}
+
