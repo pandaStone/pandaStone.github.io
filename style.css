@@ -19,7 +19,6 @@ body {
 a{
     text-decoration: none;
     color: #972c28;
-    cursor: pointer;
 }
 .aside {
     background-color: rgb(222, 76, 63);
@@ -143,9 +142,10 @@ img:hover,span:hover,a:hover {
 }
 
 .main div a{
-    color: rgb(222, 76, 63);
+    color: #de4c3f;
     font-weight: bolder;
     font-size: 18px;
+    border-bottom: 1.5px solid #de4c3f;
 }
 .main div p a {
     font-size: 14px;
