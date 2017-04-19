@@ -191,4 +191,9 @@ img:hover,span:hover,a:hover {
         width: 100%;
     }
 }
-
+.main .me .pm {
+    background-color: white;
+}
+.main .me .pm a {
+    color: rgb(222, 76, 63);
+}
