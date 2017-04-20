@@ -143,7 +143,7 @@ $(document).ready(function() {
                 text1+="</div>";
                 text2+="</div>";
                 text3+="</div>";
-                $("#app").html(text1+text2+text3);
+                $("#app").html(text1+text2+"<div class='blank'></div>"+text3);
       
     }
 
